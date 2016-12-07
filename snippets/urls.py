@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', views.obtain_auth_token),
+    url(r'^oauth2/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url('^schema/$', schema_view),
 ]
